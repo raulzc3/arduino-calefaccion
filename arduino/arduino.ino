@@ -2,8 +2,8 @@
 #include <ESP8266mDNS.h>
 #include <WiFiUdp.h>
 
-const char* ssid = "JUANCA";             //Set your wifi network name(ssid)
-const char* password = "JUANCAQD";                //Set your router password
+const char* ssid = "NASA";             //Set your wifi network name(ssid)
+const char* password = "A4bofoli0";    //Set your router password
 
 int RelayPin = D1;          //Relay is controlled by pin D1
 int relayStatus = LOW;      //Initial status of the Relay
@@ -27,9 +27,9 @@ void setup() {
   digitalWrite(LED_BUILTIN, HIGH);
 
   //WiFi configuration
-  IPAddress ip(192, 168, 0, 100);
-  IPAddress dns(192, 168, 0, 1);
-  IPAddress gateway(192, 168, 0, 1);
+  IPAddress ip(192, 168, 1, 100);
+  IPAddress dns(192, 168, 1, 1);
+  IPAddress gateway(192, 168, 1, 1);
   IPAddress subnet(255, 255, 255, 0);
   WiFi.config(ip, dns, gateway, subnet);
 
